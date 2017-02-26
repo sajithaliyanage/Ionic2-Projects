@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { NavController, NavParams,LoadingController  } from 'ionic-angular';
 import {Datamembers} from "../../providers/datamembers";
 import { PersonPage } from "../person/person";
@@ -36,18 +35,7 @@ export class HomePage {
 
   Refresh()
   {
-      this.presentLoading();
-      this.data.LoadMembers().subscribe(
-          data => {
-              this.members = data;
-              console.log(data);
-              this.loader.dismiss();
-          },
-          err => {
-              console.log(err);
-          },
-          () => console.log('Movie Search Complete')
-      );
+    this.ngOnInit()
   }
 
   Viewperson(member)
@@ -101,7 +89,7 @@ export class HomePage {
 
     presentLoading() {
         this.loader = this.loadingCtrl.create({
-            content: "Loading..."
+            content: "Refreshing..."
         });
         this.loader.present();
     }
