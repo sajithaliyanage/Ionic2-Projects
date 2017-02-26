@@ -38,10 +38,6 @@ export class HomePage {
     this.ngOnInit()
   }
 
-  Viewperson(member)
-  {
-      this.navCtrl.push(PersonPage,{member:member});
-  }
     View(member)
     {
         this.navCtrl.push(PersonPage,{member:member});
