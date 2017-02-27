@@ -35,7 +35,8 @@ export class HomePage {
 
   Refresh()
   {
-    this.ngOnInit()
+    this.ngOnInit();
+    console.log("Called");
   }
 
     View(member)
